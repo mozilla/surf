@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/Metropolis/Metropolis-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Metropolis/Metropolis-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Metropolis/Metropolis-Light.woff2") format("woff2");
+}
+
+:root {
+  --bgDark: rgba(0, 0, 0, 1);
+  --darkTextColor: rgba(0, 0, 0, .9);
+  --darkHeadlineColor: var(--bgDark);
+  --lightHeadlineColor: rgba(255, 255, 255, 1);
+  --padding: 2rem;
+  --Metropolis: "Metropolis", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  color: var(--darkTextColor);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flx-cntr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-content-width {
+  max-width: 700px;
+}
+
+section {
+  width: 100%;
+  align-items: center;
+}
+
+.body-text {
+  margin: 0 auto 1rem auto;
+  line-height: 1.7;
+  font-weight: 400;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.show-mobile {
+  display: none;
+}
+
+.h-padding {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+.hl-light {
+  color: var(--lightHeadlineColor);
+}
+
+.ff-Met {
+  font-family: var(--Metropolis);
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.txt-dark {
+  color: var(--darkTextColor);
+}
+
+.logo-wrapper {
+  background: var(--bgDark);
+  padding: 4rem .5rem 0 .5rem;
+}
+
+.surf-header {
+  font-size: 2rem;
+  background-image: url("/img/surf-light.svg");
+  color: rgba(0, 0, 0, 0);
+  margin: auto auto calc(var(--padding) / 2) auto;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.header-full-title {
+  margin: auto auto calc(var(--padding) / 2) calc(var(--padding) / 2);
+  font-size: .95rem;
+  line-height: 1.1;
+}
+
+.title-Mozilla {
+  display: block;
+}
+
+.header-menus {
+  align-items: center;
+  /* margin: calc(var(--padding) / 2) 0 calc(var(--padding) / 2) auto; */
+  margin: calc(var(--padding) / 2) 0 0 auto;
+  width: auto;
+}
+
+.contact-menu {
+  margin: auto 0 auto auto;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.desktop-nav {
+  margin: auto 0 0 auto;
+}
+
+.nav-link {
+  color: var(--darkTextColor);
+  text-decoration: none;
+  align-content: flex-end;
+  font-size: .95rem;
+  font-weight: 300;
+  margin: auto 0 0 calc(var(--padding) * 2);
+  padding-bottom: calc(var(--padding) / 2);
+}
+
+.twitter {
+  background-image: url("/img/twitter.svg");
+}
+
+.email-link {
+  background-image: url("/img/email.svg");
+}
+
+.contact-link {
+  color: rgba(0, 0, 0, 0);
+  font-size: 1px;
+  width: 1.25rem;
+  height: 1rem;
+  margin-left: 1rem;
+  opacity: .9;
+}
+
+header {
+  background: rgba(255, 255, 255, .8);
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-50px);
+  background-color: rgba(255, 255, 255, .9);
+  transition: all 0.3s ease;
+}
+
+.fixed-header .logo-wrapper {
+  padding: .5rem;
+}
+
+.fixed-header .surf-header {
+  margin: 0;
+}
+
+.fixed-header .nav-link {
+  font-weight: 500;
+}
+
+.fixed-header .title-Mozilla {
+  display: inline-block;
+}
+
+.fix-header .fixed-header {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+/* landing page */
+
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+  max-width: 500px;
+  margin: auto auto var(--padding) 0;
+}
+
+.intro {
+  padding: 4rem 0;
+}
+
+.landing {
+  background-image: url("/img/landing.jpg");
+  min-height: 500px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.surf-outline {
+  background-image: url("/img/surf-outline.svg");
+  width: 30rem;
+  margin-right: var(--padding);
+  background-position: top center;
+  margin-top: 12rem;
+}

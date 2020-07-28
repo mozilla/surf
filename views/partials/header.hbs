@@ -1,0 +1,17 @@
+<header class="flx-col h-padding">
+  <div class=" h-padding fixed-header flx-row">
+    {{> header/logo }}
+    <p class="header-full-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
+    {{> header/nav-links }}
+  </div>
+  <div class="landing-header flx-row">
+    {{> header/logo }}
+    <p class="header-full-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
+    <div class="header-menus flx-col">
+      <div class="contact-menu">
+        {{> header/contact-links }}
+      </div>
+      {{> header/nav-links }}
+    </div>
+  </div>
+</header>
