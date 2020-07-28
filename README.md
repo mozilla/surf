@@ -1,2 +1,2 @@
 # SURF
-Security User Research Foundation // surf.mozilla.org
+Mozilla Security Engineering University Relationship Framework (SURF) // surf.mozilla.org
