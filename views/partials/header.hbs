@@ -1,17 +1,36 @@
 <header class="flx-col h-padding">
-  <div class=" h-padding fixed-header flx-row">
-    {{> header/logo }}
-    <p class="header-full-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
-    {{> header/nav-links }}
+  {{> header/nav-links fixedClasses="mobile-menu-fixed"}}
+  <div class="fixed-header flx-row rel">
+    <div class="mobile-menu-z-index-hack flx-row h-padding">
+      {{> header/logo additionalClasses="slide-in-header-logo"}}
+      <p class="fixed-header-full-title header-full-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
+      <button aria-label="Toggle mobile menu" class="mobile-menu-button show-1400">
+        <span class="mm-1 mm "></span>
+        <span class="mm-2 mm"></span>
+        <span class="mm-3 mm"></span>
+        <span class="mm-4 mm"></span>
+      </button>
+      <div class="fixed-header-icons flx-row rel">
+        <div class="show-1400 fixed-contact-menu">
+          {{> header/contact-links}}
+        </div>
+      </div>
+    </div>
   </div>
   <div class="landing-header flx-row">
-    {{> header/logo }}
-    <p class="header-full-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
-    <div class="header-menus flx-col">
+    {{> header/logo additionalClasses="landing-header-logo"}}
+    <p class="header-full-title landing-header-title ff-Met font-weight-light">{{{ getString "title" }}}</p>
+    <div class="header-menus rel flx-col">
       <div class="contact-menu">
         {{> header/contact-links }}
       </div>
-      {{> header/nav-links }}
+      <button aria-label="Toggle mobile menu" class="mobile-menu-button landing-mobile-menu-button show-mobile">
+        <span class="mm-1 mm "></span>
+        <span class="mm-2 mm"></span>
+        <span class="mm-3 mm"></span>
+        <span class="mm-4 mm"></span>
+      </button>
+      {{> header/nav-links fixedClasses="desktop-nav"}}
     </div>
   </div>
 </header>

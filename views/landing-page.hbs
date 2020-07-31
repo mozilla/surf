@@ -1,19 +1,97 @@
-<main class="landing">
-  
-</main>
-
-<section class="intro flx-col" data-observing="true">
-  <div class="flx-row mid-content-width">
-    <div class="bg-img surf-outline"></div>
-      <div class="flx-col">
-        <h1 class="ff-Met">{{{ getString "title"}}}</h1>
+<section id="home" class="intro flx-col">
+  <div class="intro-bg-white content-section">
+    <div class="max-content-width flx-row rel">
+      <div class="flx-col content-left opacity-0 fade-up" data-observing="true">
+        <h1 class="ff-Met surf">SURF</h1>
+      </div>
+      <div class="flx-col margin-auto draw-border">
+        <div class="max-content-width">
+          <h2 class="body-copy-width opacity-0 fade-up" data-observing="true">{{{ getString "title"}}}</h2>
+        </div>
         {{#each (landingCopy)}}
-          <p class="body-text txt-dark">{{ this }}</p>
+          {{#if this.callout}}
+            <div class="text-callout-wrapper intro-text-callout-wrapper flx-row opacity-0 fade-up" data-observing="true">
+              <div class="email-icon-wrapper rel"></div>
+              <p class="body-text callout-text">{{{ this.text }}}</p>
+            </div>
+          {{else}}
+            <p class="body-text txt-dark opacity-0 fade-up" data-observing="true">{{{ this.text }}}</p>
+          {{/if}}
         {{/each}}
       </div>
+    </div>
+  </div>
+</section>
+<section class="divider"></section>
+
+<section id="people" class="content-section surf-people-wrapper flx-col">
+  <div class="max-content-width">
+    <h3 class="ff-Met">People</h3>
+  </div>
+  <div class="max-content-width flx-row surf-people">
+    {{#each (person)}}
+      <div class="bio-wrapper opacity-0 fade-up" data-observing="true">
+        <div class="bio-img {{ this.imgClassName }}"></div>
+        <div class="bio-content">
+          <h4 class="ff-Met bio-name">{{ this.name }}</h4>
+          <p class="bio-title ff-Met">{{ this.jobTitle }}</p>
+          <p class="bio-affiliation ff-Met">{{ this.affiliation }}</p>
+          <p class="bio-text body-text">{{ this.bio }}</p>
+        </div>
+      </div>
+    {{/each}}
   </div>
 </section>
 
-<section class="people" data-observing="true">
-  
-</section>"
+<section id="publications" class="content-section publications flx-col">
+  <div class="max-content-width">
+    <div class="flx-row">
+      <div class="flx-col">
+        <h3 class="pub-headline opacity-0 fade-up" data-observing="true">Publications</h3>
+        <div class="docs rel" data-observing="true">
+          <div class="doc doc-3 bg-img"></div>
+          <div class="doc doc-2 bg-img"></div>
+          <div class="doc doc-1 bg-img"></div>
+        </div>
+      </div>
+       <ul class="publications-list opacity-0 fade-up" data-observing="true">
+        {{#each (publication)}}
+          <li class="publication-list-item">
+            {{#if this.pubLinkHref }}
+              <a href="{{ this.pubLinkHref }}" target="_blank" rel="noopener noreferrer" class="pub-title">{{ this.title }}</a>
+            {{else}}
+              <p class="pub-title">{{ this.title }}</p>
+            {{/if}}
+            <p class="pub-authors">{{ this.authors }}</p>
+            <p class="pub-date-location">{{ this.addInfo }}</p>
+          </li>
+        {{/each}}
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+<section id="talks" class="content-section talks flx-col">
+  <div class="max-content-width">
+    <div class="flx-row">
+      <h3 class="opacity-0 fade-up" data-observing="true">Talks</h3>
+    </div>
+  </div>
+</section>
+
+<section id="summits" class="content-section summits flx-col">
+  <div class="max-content-width">
+    <div class="flx-row">
+      <h3 class="opacity-0 fade-up" data-observing="true">Summits</h3>
+    </div>
+  </div>
+</section>
+
+<section id="links" class="content-section links flx-col">
+  <div class="max-content-width">
+    <div class="flx-row">
+      <h3 class="opacity-0 fade-up" data-observing="true">Links</h3>
+    </div>
+  </div>
+</section>
