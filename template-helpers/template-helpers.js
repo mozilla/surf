@@ -64,6 +64,7 @@ function publication() {
     },
     {
       title: "Designing Reverse Firewalls for the Real World",
+      pubHref: "https://www.surrey.ac.uk/esorics-2020",
       authors: "Angèle Bossuat, Xavier Bultel, Pierre-Alain Fouque, Cristina Onete and Thyla van der Merwe",
       addInfo: "ESORICS 2020 (to appear), September, 2020",
     },
@@ -79,11 +80,13 @@ function publication() {
     },
     {
       title: "Extending the Same Origin Policy with Origin Attributes",
+      pubHref: "https://www.semanticscholar.org/paper/Extending-the-Same-Origin-Policy-with-Origin-Vyas-Marchesini/30c71e8da7dffcbb4888861813f752f8d36aca5f",
       authors: "Tanvi Vyas, Andrea Marchesini, Christoph Kerschbaumer",
       addInfo: "International Conference on Information Systems Security and Privacy; Porto, Portugal, February 2017",
     },
     {
       title: "Enforcing Content Security by Default within Web Browsers",
+      pubHref: "https://ieeexplore.ieee.org/document/7839802",
       authors: "Christoph Kerschbaumer",
       addInfo: "International Conference on Cybersecurity Development; Boston, Massachusetts, November 2016",
     },
@@ -190,9 +193,43 @@ function summits() {
   }
 }
 
+function link() {
+  return [
+    {
+      linkTitle: "Mozilla Security Blog",
+      linkHref: "https://blog.mozilla.org/security/"
+    },
+    {
+      linkTitle: "SURF @Twitter",
+      linkHref: "https://twitter.com/MozillaSurf",
+    },
+    {
+      linkTitle: "Mozilla Careers",
+      linkHref: "https://careers.mozilla.org/",
+    },
+    {
+      linkTitle: "Firefox Build Instructions",
+      linkHref: "https://wiki.mozilla.org/Building_Firefox/SURF",
+    },
+    {
+      linkTitle: "Attack & Defense",
+      linkHref: "",
+    },
+    {
+      linkTitle: "Attack & Defense - Twitter",
+      linkHref: "https://twitter.com/attackndefense",
+    },
+    {
+      linkTitle: "Mozilla Research",
+      linkHref: "https://research.mozilla.org/papers-publications/",
+    },
+  ]
+}
+
 module.exports = {
   getString,
   landingCopy,
+  link(),
   person,
   publication,
   siteLinks,
