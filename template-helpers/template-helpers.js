@@ -229,7 +229,7 @@ function link() {
 module.exports = {
   getString,
   landingCopy,
-  link(),
+  link,
   person,
   publication,
   siteLinks,
