@@ -24,7 +24,7 @@ app.use(helmet.contentSecurityPolicy({
     fontSrc: ["'self'"],
     frameAncestors: ["'self'"],
     mediaSrc: ["'self'"],
-    imgSrc: ["'self'"],
+    imgSrc: ["'self'", "https://d24wuq6o951i2g.cloudfront.net"],
     objectSrc: ["'self'", "blob"],
     scriptSrc: ["'self'"],
     styleSrc: ["'self'"],
