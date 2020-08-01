@@ -1,0 +1,5 @@
+.fixed-header-full-title {
+  margin: auto auto calc(var(--padding) / 2) auto;
+  max-width: 50%;
+  white-space: nowrap;
+}

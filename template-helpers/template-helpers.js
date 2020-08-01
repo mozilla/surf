@@ -120,10 +120,82 @@ function person() {
   ]
 }
 
+function speaker() {
+  return [
+    {
+      speakerName: "Thyla",
+      talks: [
+        {
+          talkTitle: "Real World Crypto 2020 (video, 1st talk of the session)",
+          talkHref: "https://www.youtube.com/watch?v=kED3K57EV6w",
+          isVideo: true,
+        },
+        {
+          talkTitle: "London Crypto Day 2020",
+          talkHref: "https://londoncryptoday.github.io/2020/",
+        },
+        {
+          talkTitle: "London Crypto Day 2019",
+          talkHref: "https://londoncryptoday19.splashthat.com/",
+        },
+        {
+          talkTitle: "Newcastle University Women in Mathematics Day 2018",
+          talkHref: "https://conferences.ncl.ac.uk/womeninmathsday2018/speakers/",
+        },
+        
+      ],
+    },
+    {
+      speakerName: "Christoph",
+      talks: [
+        {
+          talkTitle: "Keynote @ German OWASP Day",
+          talkHref: "https://god.owasp.de/schedule/",
+        },
+        {
+          talkTitle: "Could we use Information Flow Tracking to generate more sophisticated blacklists?",
+          talkInfo: "Web Application Security Seminar, Schloss Dagstuhl; Germany; August 2018",
+          talkHref: "https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18321",
+        },
+        {
+          talkTitle: "Enforcing Security in Firefox",
+          talkInfo: "SBA Research; Vienna, Austria; May 2017",
+          talkHref: "https://www.sba-research.org/2017/05/18/christoph-kerschbaumer-enforcing-security-in-firefox/",
+        }
+      ],
+    },
+  ];
+}
+
+function summits() {
+  return {
+    "vienna": {
+      summitName: "Security Research Summit - Vienna",
+      summitLocation: "",
+      summitDate: "",
+      imgClassName: "vienna",
+    },
+    "san-francisco" : {
+      summitName: "Security Research Summit - San Francisco",
+      summitLocation: "",
+      summitDate: "",
+      imgClassName: "san-francisco",
+    },
+    "london": {
+      summitName: "Security Research Summit - London",
+      summitLocation: "",
+      summitDate: "",
+      imgClassName: "london",
+    }
+  }
+}
+
 module.exports = {
   getString,
   landingCopy,
   person,
   publication,
   siteLinks,
+  speaker,
+  summits,
 };

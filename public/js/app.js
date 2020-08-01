@@ -14,6 +14,9 @@
     } else {
       document.body.classList.remove("slide-in-header");
       header.classList.remove("fix-header");
+      if (document.querySelector(".show-menu")) {
+        closeMenu();
+      }
     }
   };
 
