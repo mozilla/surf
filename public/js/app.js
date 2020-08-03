@@ -1,6 +1,6 @@
 (() => {
 
-  const mobileMenuButtons = document.querySelectorAll(".mobile-menu-button");
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
   const header = document.querySelector("header");
   const win = window;
   const availableIntersectionObserver = ("IntersectionObserver" in window);
@@ -25,19 +25,16 @@
   }
 
   const doMobileMenu = () => {
-    mobileMenuButtons.forEach(btn => {
-      btn.classList.toggle("open");
-    });
-    if (mobileMenuButtons[0].classList.contains("open")) {
+    mobileMenuButton.classList.toggle("open");
+    if (mobileMenuButton.classList.contains("open")) {
       mobileMenuLinks.classList.add("show-menu");
       return;
     }
     return closeMenu();
   }
 
-  mobileMenuButtons.forEach(btn => {
-    btn.addEventListener("click", doMobileMenu);
-  });
+
+  mobileMenuButton.addEventListener("click", doMobileMenu);
 
 
   if (!availableIntersectionObserver) {

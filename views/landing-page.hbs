@@ -1,9 +1,13 @@
-<main>
-  <div class="max-content-width">
-    <svg id="surf-outlines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.04 216.18"><path d="M3.45,207.6l35-27.91c13.67,21.64,32.18,32.75,57,32.75,22.5,0,34.17-10.82,34.17-25.92,0-19.36-19.93-23.34-48.69-29.89-31-6.55-65.78-16.52-65.78-58.66,0-34.17,30.47-61.51,73.75-61.51,36.73,0,59.8,12.82,80.87,36.17L137,98.25C126.17,82.31,112.22,72.34,88.3,72.34c-22.49,0-32.17,11.11-32.17,24.78,0,16.8,20.78,19.93,46.69,25.91,31.89,6.83,68.63,17.08,68.63,62.07,0,35.59-29.9,65.21-76.31,65.21C50.43,250.31,23.1,232.65,3.45,207.6Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/><path d="M199.06,167.45V39.6h41V168.3c0,25.63,16.51,43.28,41,43.28s41.29-17.65,41.29-43.28V39.6h41V167.45c0,51.82-33,82.86-82.29,82.86S199.06,219.27,199.06,167.45Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/></g><path d="M399.51,39.6H483.8c47.83,0,76.31,30.75,76.31,70.33,0,26.19-13.38,49.83-36.45,61.5l41,76h-45L486.36,182h-46.7v65.49H399.51Zm40.15,37v68.63h41c26.48,0,38.72-16.52,38.72-35,0-20.5-13.1-33.6-38.72-33.6Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/><path d="M590.86,39.6H724.69V77.75h-93.4v48.12h93.4v37.59h-93.4v84H590.86Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/>å</svg>
+<!-- Landing page image -->
+<main class="content-section flx-col">
+  <div class="max-content-width flx-col">
+    <h2 class="opacity-0 fade-up" data-observing="true"><span class="white">{{{ getString "title"}}}</span></h2>
+    {{!-- <svg id="surf-outlines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.04 216.18"><path d="M3.45,207.6l35-27.91c13.67,21.64,32.18,32.75,57,32.75,22.5,0,34.17-10.82,34.17-25.92,0-19.36-19.93-23.34-48.69-29.89-31-6.55-65.78-16.52-65.78-58.66,0-34.17,30.47-61.51,73.75-61.51,36.73,0,59.8,12.82,80.87,36.17L137,98.25C126.17,82.31,112.22,72.34,88.3,72.34c-22.49,0-32.17,11.11-32.17,24.78,0,16.8,20.78,19.93,46.69,25.91,31.89,6.83,68.63,17.08,68.63,62.07,0,35.59-29.9,65.21-76.31,65.21C50.43,250.31,23.1,232.65,3.45,207.6Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/><path d="M199.06,167.45V39.6h41V168.3c0,25.63,16.51,43.28,41,43.28s41.29-17.65,41.29-43.28V39.6h41V167.45c0,51.82-33,82.86-82.29,82.86S199.06,219.27,199.06,167.45Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/></g><path d="M399.51,39.6H483.8c47.83,0,76.31,30.75,76.31,70.33,0,26.19-13.38,49.83-36.45,61.5l41,76h-45L486.36,182h-46.7v65.49H399.51Zm40.15,37v68.63h41c26.48,0,38.72-16.52,38.72-35,0-20.5-13.1-33.6-38.72-33.6Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/><path d="M590.86,39.6H724.69V77.75h-93.4v48.12h93.4v37.59h-93.4v84H590.86Z" transform="translate(-1.81 -35.3)" fill="none" stroke="#fff" stroke-width="1"/>å</svg> --}}
   </div>
 </main>
 
+
+<!-- Landing -->
 <section id="home" class="home intro flx-col">
   <div class="intro-bg-white content-section">
     <div class="max-content-width">
@@ -12,10 +16,9 @@
           <h1 class="opacity-0 fade-up" data-observing="true">SURF</h1>
         </div>
         <div class="flx-col intro-text-wrapper">
-                    <h2 class="opacity-0 fade-up" data-observing="true">{{{ getString "title"}}}</h2>
+    {{!-- <h2 class="opacity-0 fade-up" data-observing="true"><span class="white">{{{ getString "title"}}}</span></h2> --}}
           {{#each (landingCopy)}}
             {{#if this.callout}}
-            
               <div class="text-callout-wrapper intro-text-callout-wrapper flx-row opacity-0 fade-up" data-observing="true">
                 <div class="email-icon-wrapper rel"></div>
                 <p class="body-text callout-text">{{{ this.text }}}</p>
@@ -29,6 +32,9 @@
     </div>
   </div>
 </section>
+
+
+<!-- People -->
 <section id="people" class="content-section surf-people-wrapper flx-col">
   <div class="max-content-width">
     <h3 class="ff-Met">People</h3>
@@ -48,6 +54,7 @@
   </div>
 </section>
 
+<!-- Summits -->
 <section id="summits" class="content-section summits flx-col">
   <div class="max-content-width">
     <h3 class="opacity-0" data-observing="true">Summits</h3>
@@ -65,7 +72,7 @@
     {{/each}}
   </div>
 </section>
-
+<!-- Publications -->
 <section id="publications" class="content-section publications flx-col">
   <div class="max-content-width">
     <div class="flx-row">
