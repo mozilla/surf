@@ -132,14 +132,17 @@ function speaker() {
           talkTitle: "Real World Crypto 2020 (video, 1st talk of the session)",
           talkHref: "https://www.youtube.com/watch?v=kED3K57EV6w",
           isVideo: true,
+          talkInfo: "Video, first talk of session",
         },
         {
           talkTitle: "London Crypto Day 2020",
           talkHref: "https://londoncryptoday.github.io/2020/",
+          talkInfo: "Fall 2020 at Google London (Soho)",
         },
         {
           talkTitle: "London Crypto Day 2019",
           talkHref: "https://londoncryptoday19.splashthat.com/",
+          talkInfo: "CRLite",
         },
         {
           talkTitle: "Newcastle University Women in Mathematics Day 2018",
@@ -152,7 +155,8 @@ function speaker() {
       speakerName: "Christoph",
       talks: [
         {
-          talkTitle: "Keynote @ German OWASP Day",
+          talkTitle: "Hardening the Content Security Landscape of Firefox",
+          talkInfo: "Keynote @ German OWASP Day",
           talkHref: "https://god.owasp.de/schedule/",
         },
         {
@@ -195,33 +199,33 @@ function summits() {
 
 function link() {
   return [
-    {
-      linkTitle: "Mozilla Security Blog",
-      linkHref: "https://blog.mozilla.org/security/"
-    },
+    // {
+    //   linkTitle: "Attack & Defense",
+    //   linkHref: "",
+    // },
+    // {
+    //   linkTitle: "Attack & Defense - Twitter",
+    //   linkHref: "https://twitter.com/attackndefense",
+    // },
+    // {
+    //   linkTitle: "Mozilla Careers",
+    //   linkHref: "https://careers.mozilla.org/",
+    // },
+    // {
+    //   linkTitle: "Mozilla Research",
+    //   linkHref: "https://research.mozilla.org/papers-publications/",
+    // },
+    // {
+    //   linkTitle: "Mozilla Security Blog",
+    //   linkHref: "https://blog.mozilla.org/security/"
+    // },
     {
       linkTitle: "SURF @Twitter",
       linkHref: "https://twitter.com/MozillaSurf",
     },
     {
-      linkTitle: "Mozilla Careers",
-      linkHref: "https://careers.mozilla.org/",
-    },
-    {
       linkTitle: "Firefox Build Instructions",
       linkHref: "https://wiki.mozilla.org/Building_Firefox/SURF",
-    },
-    {
-      linkTitle: "Attack & Defense",
-      linkHref: "",
-    },
-    {
-      linkTitle: "Attack & Defense - Twitter",
-      linkHref: "https://twitter.com/attackndefense",
-    },
-    {
-      linkTitle: "Mozilla Research",
-      linkHref: "https://research.mozilla.org/papers-publications/",
     },
   ]
 }

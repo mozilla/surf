@@ -84,9 +84,17 @@ body {
   margin: 0;
 }
 
+li:last-of-type {
+  margin-bottom: 0 !important;
+}
 .third {
   flex: 1 1 30%;
   padding-right: 1rem;
+}
+
+.half {
+  flex: 1 1 50%;
+  max-width: 50%;
 }
 
 .flx-third {
@@ -192,13 +200,6 @@ button:active {
   position: relative;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .max-content-width {
   max-width: 1200px;
   width: 100%;
@@ -215,7 +216,7 @@ section {
 }
 
 .content-section {
-  padding: calc(var(--padding) * 3) var(--padding);
+  padding: calc(var(--padding) * 4) var(--padding);
 }
 
 .body-text {
@@ -333,6 +334,10 @@ section {
 
 header {
   background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .fixed-header {
@@ -341,7 +346,6 @@ header {
   top: 0px;
   left: 0;
   right: 0;
-  pointer-events: none;
   transition: top 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -357,7 +361,6 @@ header {
   display: flex;
   opacity: 1;
   visibility: visible;
-  pointer-events: all;
   left: 0;
   right: 0;
   top: 0;
@@ -715,11 +718,11 @@ span.mm-4 {
 
 .publication-list-item {
   margin-bottom: var(--padding);
-  max-width: 660px;
 }
 
+.talks-hl,
 .pub-headline {
-  margin: 0 auto 4rem 0;
+  margin: auto auto auto 0;
 }
 
 .publications-list {
@@ -729,18 +732,21 @@ span.mm-4 {
 .pub-title,
 .pub-authors,
 .pub-date-location,
-.talk-title,
 .talk-info {
   margin: 0 auto .35rem 0;
 }
 
-.pub-title {
+.pub-title,
+.talk-title,
+.talk-title-link,
+.feed-list-link {
   font-family: var(--Metropolis);
   font-weight: 600;
 }
 
 .pub-authors,
-.pub-date-location {
+.pub-date-location,
+.talk-info {
   font-weight: 400;
   font-size: .9rem;
   opacity: .7;
@@ -758,52 +764,77 @@ span.mm-4 {
   background-image: url("/img/pub-3d-3.svg");
 }
 
-.doc {
-  position: absolute;
-  left: -5rem;
-  right: 0;
-  margin: auto;
-  max-width: 465px;
-  width: 26vw;
-  height: 10rem;
-  transition: top 0.3s ease;
-}
-
-.init-pages .doc {
-  transition: top 0.3s ease;
-  transition-delay: .15s;
-}
-
-.doc-1 {
-  top: 3rem;
-}
-
-.doc-2 {
-  top: 3rem;
-}
-
-.doc-3 {
+.init-pages .doc-3 {
   top: 4rem;
 }
 
+.doc {
+  position: absolute;
+  left: -7rem;
+  right: 0;
+  top: 3rem;
+  margin: auto;
+  max-width: 465px;
+  width: 26vw;
+  height: 5rem;
+  transition: top 0.3s ease;
+}
+
+.docs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6rem;
+}
+
 .init-pages .doc-1 {
-  top: 1rem;
+  top: 2rem;
 }
 
 .init-pages .doc-2 {
   top: 3rem;
 }
 
+.init-pages .doc {
+  transition: top 0.2s ease-out;
+  transition-delay: .15s;
+}
+
 #surf-outlines {
   height: 10rem;
 }
 
-#surf-outlines  path {
-  opacity: 0.7;
+
+#surf-outlines  path,
+.mic-cord {
+  /* opacity: 0.7; */
   fill: rgba(0, 0, 0, 0);
   stroke-dasharray: 1100;
   stroke-dashoffset: 1100;
-  animation: dash 5s ease forwards;
+  animation: dash 10s ease forwards;
+}
+
+#mic circle {
+  animation: fadeOpacity 2s ease infinite alternate;
+}
+
+@keyframes fadeOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: .7;
+  }
+}
+
+#mic {
+  width: 4rem;
+  left: 2px;
+  top: 10rem;
+  position: absolute;
+  opacity: 1;
+  z-index: -1;
 }
 
 @keyframes dash {
@@ -817,26 +848,46 @@ span.mm-4 {
   }
 }
 
-.init-pages .doc-3 {
-  top: 5rem;
-}
-
 /* TALKS */
 
+@keyframes fillText {
+  0% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
 .talks-list {
-  padding-left: 4rem;
+  padding-left: 3.25rem;
 }
 
-.talk-info {
-  opacity: .8;
-  font-size: .9rem;
-}
-
-.talk-title {
-  font-weight: 600;
+.talk-title,
+.talk-title-link {
   opacity: .9;
-  font-size: .9rem;
-  margin-bottom: .25rem;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 4px;
+  margin-left: -4px;
+  margin-bottom: 0;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255, 0), 0 0 0 5px rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.talk-title-link:hover {
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: 0 0 0 2px rgb(255, 255, 255, 0), 0 0 0 5px rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.talk-title-link:focus {
+  box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 5px rgba(255, 255, 255, .2);
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .talk-list-item {
@@ -857,12 +908,13 @@ span.mm-4 {
 .speaker-name::before {
   content: "";
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   background-size: cover;
   border-radius: 50%;
   background-repeat: no-repeat;
   margin-right: 1rem;
+  filter: grayscale(1);
 }
 
 .speaker-name.Thyla::before {
@@ -872,6 +924,8 @@ span.mm-4 {
 .speaker-name.Christoph::before {
   background-image: url("/img/surf-people/chris.jpeg");
 }
+
+/* Summits */
 
 .summit-wrapper {
   margin-bottom: calc(var(--padding) * 2);
@@ -898,6 +952,69 @@ span.mm-4 {
 #talks {
   background: rgba(0, 0, 0, .9);
   color: rgba(255, 255, 255, 1);
+}
+
+
+/* Links */
+
+.link {
+  font-family: var(--Metropolis);
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  font-size: .9rem;
+  margin: 0 auto 1.5rem 0
+}
+
+.links-wrapper {
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 15px solid;
+}
+
+.rss-feeds-wrapper {
+  border-color: var(--mozLightYellow);
+}
+
+.rand-links {
+  border-color: var(--mozWarmRed);
+}
+
+.Moz-links {
+  border-color: var(--mozNeonBlue);
+}
+
+.feed-list {
+  border-top: 1px solid var(--mozDarkGrey);
+    padding: 1.5rem 0 0 0;
+}
+
+.feed-date {
+  border-left: 1px solid var(--mozDarkGrey);
+  margin-left: .5rem;
+  padding-left: .5rem;
+  color: var(--mozDarkGrey);
+}
+
+.feed-list-item {
+  margin-bottom: 2rem;
+}
+
+.feed-list-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  margin: 0 auto .5rem 0;
+  display: inline-block;
+  font-size: .8rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.feed-info {
+  margin: 0 auto .5rem 0;
+  font-size: .7rem;
 }
 
 @media screen and (min-width: 1200px) {
