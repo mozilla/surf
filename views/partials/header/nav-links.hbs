@@ -1,5 +1,5 @@
       <nav class="flx-row {{ fixedClasses }}">
         {{#each (siteLinks)}}
-          <a href="{{ this.linkHref }}" class="nav-link ff-Met {{ mobileNavLinkClasses }}">{{ this.linkTitle }}</a>
+        <a href="#{{ this.linkHref }}" data-link-id="{{ this.linkHref }}" class="nav-link ff-Met {{ mobileNavLinkClasses }}">{{ this.linkTitle }}</a>
         {{/each}}
       </nav>

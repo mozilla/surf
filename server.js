@@ -20,7 +20,7 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     baseUri: ["'none'"],
     defaultSrc: ["'self'"],
-    connectSrc: ["'self'", "http://blog.mozilla.org/attack-and-defense/feed", "https://www.feedrapp.info/?support=true&version=1.3.0&q=http%3A%2F%2Fblog.mozilla.org%2Fattack-and-defense%2Ffeed%2F"],
+    connectSrc: ["'self'", "https://blog.mozilla.org/attack-and-defense/feed", "https://www.feedrapp.info/?support=true&version=1.3.0&q=http%3A%2F%2Fblog.mozilla.org%2Fattack-and-defense%2Ffeed%2F", "https://blog.mozilla.org/security/feed/"],
     fontSrc: ["'self'"],
     frameAncestors: ["'self'"],
     mediaSrc: ["'self'"],

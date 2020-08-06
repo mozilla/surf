@@ -11,27 +11,27 @@ function siteLinks() {
   return [
     {
       "linkTitle": "Home",
-      "linkHref": "#home",
+      "linkHref": "home",
     },
     {
       "linkTitle": "People",
-      "linkHref": "#people",
+      "linkHref": "people",
     },
     {
       "linkTitle": "Summits",
-      "linkHref": "#summits",
+      "linkHref": "summits",
     },
     {
       "linkTitle": "Publications",
-      "linkHref": "#publications",
+      "linkHref": "publications",
     },
     {
       "linkTitle": "Talks",
-      "linkHref": "#talks",
+      "linkHref": "talks",
     },
     {
       "linkTitle": "Links",
-      "linkHref": "#links",
+      "linkHref": "links",
     },
     // {
     //   "linkTitle": "Funding",
@@ -178,65 +178,84 @@ function summits() {
   return {
     "vienna": {
       summitName: "Security Research Summit - Vienna",
-      summitLocation: "",
-      summitDate: "",
+      summitLocation: "Vienna, Austria",
+      summitDate: "November 8, 2019",
       imgClassName: "vienna",
     },
     "san-francisco" : {
       summitName: "Security Research Summit - San Francisco",
-      summitLocation: "",
-      summitDate: "",
+      summitLocation: "San Francisco, CA, USA",
+      summitDate: "May 24, 2019",
       imgClassName: "san-francisco",
     },
     "london": {
       summitName: "Security Research Summit - London",
-      summitLocation: "",
-      summitDate: "",
+      summitLocation: "London, England",
+      summitDate: "November 12, 2018",
       imgClassName: "london",
     }
   }
 }
 
-function link() {
+function uncategorizedLinks(args) {
+  return args.fn(
+    { 
+      linkList: [
+        {
+          linkTitle: "SURF @Twitter",
+          linkHref: "https://twitter.com/MozillaSurf",
+        },
+        {
+          linkTitle: "Firefox Build Instructions",
+          linkHref: "https://wiki.mozilla.org/Building_Firefox/SURF",
+        },
+      ],
+    });
+}
+
+function mozLinks(args) {
+  return args.fn(
+    { 
+      listClassName: "Moz-links",
+      linkList : [
+        {
+          linkTitle: "Mozilla Careers",
+          linkHref: "https://careers.mozilla.org/",
+        },
+        {
+          linkTitle: "Mozilla Research",
+          linkHref: "https://research.mozilla.org/papers-publications/",
+        },
+        {
+          linkTitle: "Mozilla Security Blog",
+          linkHref: "https://blog.mozilla.org/security/"
+        },
+      ],
+    })
+}
+
+function attackDefenseLinksAndFeed() {
   return [
-    // {
-    //   linkTitle: "Attack & Defense",
-    //   linkHref: "",
-    // },
-    // {
-    //   linkTitle: "Attack & Defense - Twitter",
-    //   linkHref: "https://twitter.com/attackndefense",
-    // },
-    // {
-    //   linkTitle: "Mozilla Careers",
-    //   linkHref: "https://careers.mozilla.org/",
-    // },
-    // {
-    //   linkTitle: "Mozilla Research",
-    //   linkHref: "https://research.mozilla.org/papers-publications/",
-    // },
-    // {
-    //   linkTitle: "Mozilla Security Blog",
-    //   linkHref: "https://blog.mozilla.org/security/"
-    // },
-    {
-      linkTitle: "SURF @Twitter",
-      linkHref: "https://twitter.com/MozillaSurf",
-    },
-    {
-      linkTitle: "Firefox Build Instructions",
-      linkHref: "https://wiki.mozilla.org/Building_Firefox/SURF",
-    },
-  ]
+      {
+        linkTitle: "Attack & Defense",
+        linkHref: "",
+      },
+      {
+        linkTitle: "Attack & Defense - Twitter",
+        linkHref: "https://twitter.com/attackndefense",
+      },
+    ];
 }
 
 module.exports = {
+  attackDefenseLinksAndFeed,
   getString,
   landingCopy,
-  link,
+  mozLinks,
   person,
   publication,
   siteLinks,
   speaker,
   summits,
+  uncategorizedLinks,
 };
