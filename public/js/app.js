@@ -26,16 +26,14 @@ var RSS=function(){"use strict";const t=["doctype","html","head","title","base",
   });
 
   win.onscroll = () => {
-    if (win.pageYOffset > 300) {
+    if (win.pageYOffset > 500) {
       header.classList.add("fix-header");
-      document.body.classList.add("slide-in-header");
     } else {
-      document.body.classList.remove("slide-in-header");
       header.classList.remove("fix-header");
     }
   };
 
-  window.onload = function() {
+  win.onload = function() {
     const rss = new RSS(
       document.querySelector("#rss-feeds"),
       ["http://blog.mozilla.org/attack-and-defense/feed/"]
