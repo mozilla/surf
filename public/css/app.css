@@ -34,7 +34,7 @@
   --darkTextColor: #202020;
   --alignLeftWithMargin: 0 auto 1rem 0;
   --lightHeadlineColor: rgb(10, 4, 4);
-  --maxBodyCopyWidth: 600px;
+  --maxBodyCopyWidth: 660px;
   --Metropolis: "Metropolis", sans-serif;
   --mobileMenuTransitions: visibility 0.3s ease, transform 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
   --mozBlue: #595cf3;
@@ -85,6 +85,7 @@ html {
 li:last-of-type {
   margin-bottom: 0 !important;
 }
+
 .third {
   flex: 1 1 30%;
   padding-right: 1rem;
@@ -257,7 +258,7 @@ section {
 }
 
 .fix-header .logo-wrapper {
-  background-color: #202020;
+  background-color: var(--darkTextColor);
   transition: background-color 0.3s ease;
 }
 
@@ -272,6 +273,11 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+.text-bg-dark {
+  background-color: var(--darkTextColor);
+  color: rgba(255, 255, 255, 1);
 }
 
 .header-full-title {
@@ -480,32 +486,25 @@ section {
 .email-icon-wrapper {
   display: flex;
   align-items: center;
-  min-width: 4.3rem;
-  max-width: 4.3rem;
-  margin-right: 2rem;
-  max-height: 4.3rem;
+  min-width: 3rem;
+  max-width: 3rem;
+  margin-right: 1rem;
+  max-height: 3rem;
   border-radius: 50%;
+  border: 3px solid var(--mozLightYellow);
 }
 
-.email-icon-wrapper::before,
 .email-icon-wrapper::after {
   position: absolute;
   content: "";
   display: flex;
-  width: 3.5rem;
-  height: 2.25rem;
+  height: 1.15rem;
+  left: 0;
+  right: 0;
+  margin: auto;
   background-repeat: no-repeat;
-}
-
-.email-icon-wrapper::before {
-  background-image: url("/img/email-icon-green.svg");
-  left: .65rem;
-}
-
-.email-icon-wrapper::after {
   background-image: url("/img/email-icon.svg");
-  right: -.5rem;
-  top: 1.5rem;
+  background-position: center center;
 }
 
 .email-icon {
@@ -1229,8 +1228,12 @@ span.mm-4 {
     flex-direction: column;
   }
 
-  .flx-third {
+  .flx-third,
+  .bio-wrapper.flx-third {
     flex-direction: row;
+    /* max-width: var(--maxBodyCopyWidth); */
+    /* margin: auto auto calc(var(--padding)*2) auto; */
+    width: 100%;
     max-width: 100%;
   }
 
