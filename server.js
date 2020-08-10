@@ -56,4 +56,4 @@ app.get("/", (req, res) => {
 });
 
 // eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Secure Standards Research Conference on Port ${port}.`));
+app.listen(port, () => console.log(`Mozilla Sec-Eng University Relationship Framework running on Port ${port}.`));
