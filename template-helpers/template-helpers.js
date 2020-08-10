@@ -12,6 +12,7 @@ function siteLinks() {
     {
       "linkTitle": "Home",
       "linkHref": "home",
+      "linkClass": "home-link",
     },
     {
       "linkTitle": "People",
