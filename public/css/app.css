@@ -1225,11 +1225,8 @@ span.mm-4 {
     flex-direction: column;
   }
 
-  .flx-third,
-  .bio-wrapper.flx-third {
+  .flx-third {
     flex-direction: row;
-    /* max-width: var(--maxBodyCopyWidth); */
-    /* margin: auto auto calc(var(--padding)*2) auto; */
     width: 100%;
     max-width: 100%;
   }
