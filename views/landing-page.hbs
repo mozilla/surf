@@ -82,7 +82,7 @@
         {{#each (publication)}}
           <li class="publication-list-item">
             {{#if this.pubHref }}
-              <a href="{{ this.pubHref }}" target="_blank" rel="noopener noreferrer" class="pub-title pseudos dark-link">{{ this.title }}</a>
+              <a href="{{ this.pubHref }}" target="_blank" rel="noopener noreferrer" class="pub-title pseudos dark-link open-new-tab">{{ this.title }}</a>
             {{else}}
               <p class="pub-title">{{ this.title }}</p>
             {{/if}}
@@ -111,7 +111,7 @@
                 {{#each this.talks}}
                   <li class="talk-list-item">
                     {{#if this.talkHref}}
-                      <a target="_blank" rel="noopener noreferrer" href="{{ this.talksHref }}" class="talk-title talk-title-link ff-Met pseudos white-link">{{ this.talkTitle }}</a>
+                      <a target="_blank" rel="noopener noreferrer" href="{{ this.talksHref }}" class="talk-title talk-title-link ff-Met pseudos white-link open-new-tab">{{ this.talkTitle }}</a>
                     {{else}}
                       <p class="talk-title ff-Met">{{ this.talkTitle }}</p>
                     {{/if}}

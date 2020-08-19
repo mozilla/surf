@@ -2,6 +2,56 @@
 
 const websiteCopy = require("./website-content");
 
+function footerLinkGroup() {
+  return [
+    {
+      linkGroupTitle: "Mozilla",
+      links: [
+        {
+          linkHref: "https://www.mozilla.org/about/",
+          linkTitle: "About",
+        },
+        {
+          linkHref: "https://blog.mozilla.org/",
+          linkTitle: "Blog",
+        },
+        {
+          linkHref: "https://www.mozilla.org/contact/",
+          linkTitle: "Contact Us",
+        },
+        {
+          linkHref: "https://donate.mozilla.org/?presets=50,30,20,10&amount=30&utm_source=mozilla.org&utm_medium=referral&utm_content=footer&currency=usd",
+          linkTitle: "Donate",
+        },
+        {
+          linkHref: "https://www.mozilla.org/about/governance/policies/participation/",
+          linkTitle: "Code of Conduct",
+        },
+      ],
+    },
+    {
+      linkGroupTitle: "Firefox",
+      links: [
+        {
+          linkHref: "https://www.mozilla.org/firefox/new/",
+          linkTitle: "Download Firefox",
+        },
+        {
+          linkHref: "https://www.mozilla.org/firefox/mobile/",
+          linkTitle: "Download Firefox Mobile",
+        },
+        {
+          linkHref: "https://www.mozilla.org/firefox/features/",
+          linkTitle: "Features",
+        },
+        {
+          linkHref: "https://www.mozilla.org/firefox/channel/desktop/",
+          linkTitle: "Beta, Nightly, Developer Edition",
+        },
+      ],
+    },
+  ];
+}
 
 function getString(args) {
   return websiteCopy[args];
@@ -249,6 +299,7 @@ function attackDefenseLinksAndFeed() {
 }
 
 module.exports = {
+  footerLinkGroup,
   attackDefenseLinksAndFeed,
   getString,
   landingCopy,
