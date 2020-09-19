@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US" ontouchmove>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/dist/app.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="{{ getString "site-description" }}" />
+    <meta property="og:description" content="{{ getString "site-description" }}" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="{{ getString "site-title" }}" />
+    <meta property="og:url" content="https://ssr.mozilla.org" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="{{ getString "site-description" }}" />
+    <meta name="twitter:title" content="{{ getString "site-title" }}" />
+    <script type="text/javascript" src="/js/app.js" defer></script>
+    <title>{{ getString "site-title" }}</title>
+  </head>
+  <body>
+    {{> header }}
+    {{{ body }}}
+    {{> footer }}
+  </body>
+</html>
