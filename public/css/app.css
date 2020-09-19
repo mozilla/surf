@@ -456,6 +456,11 @@ section {
   position: relative;
 }
 
+.bold-intro {
+  display: inline-block;
+  font-weight: 600;
+}
+
 .intro-bg-white {
   width: 100%;
   display: flex;
@@ -534,6 +539,38 @@ h3 {
   transition: filter 0.2s ease;
 }
 
+.bio-contact {
+  justify-content: center;
+  margin-bottom: calc(var(--padding) / 2);
+  text-decoration: none;
+}
+
+.bio-email-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  background-image: url("/img/email-icon.svg");
+  background-position: center center;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  border: 2px solid #eee;
+  background-color: #eae9e9;
+  border-radius: 50%;
+}
+
+.bio-contact-email {
+  font-weight: 600;
+  font-size: .7rem;
+  color: var(--darkTextColor);
+  opacity: .9;
+  margin: auto auto auto .5rem;
+  transition: opacity 0.3s ease;
+}
+
+.bio-contact:hover .bio-contact-email {
+  opacity: .5;
+  transition: opacity 0.3s ease;
+}
+
 .thyla {
   background-image: url("/img/surf-people/thyla.jpeg");
 }
@@ -601,7 +638,7 @@ h3 {
   opacity: 0;
   flex-direction: column;
   text-align: right;
-  background-color: rgb(255, 255, 255);
+  background-color: #fafafa;
   box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, .05);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -618,15 +655,12 @@ h3 {
   margin: auto;
 }
 
-/* .mobile-menu-fixed > .nav-link:hover {
-  background-color: var(--mozGrey);
-} */
-
 .show-menu {
   visibility: visible;
   pointer-events: all;
   opacity: 1;
   transform: translateY(0px);
+  background-image: url("/img/SVG/bg.svg");
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
